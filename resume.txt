@@ -1,0 +1,160 @@
+Kurt Collins
+================================================================================
+25 years building technology in service of people.
+
+kurt@collins.gd
++1 (415) 385-3003
++351 967 933 383
+Lisbon · Jersey City
+collins.gd
+linkedin.com/in/kurtcollins
+
+
+SUMMARY
+--------------------------------------------------------------------------------
+I've spent 25 years at the edge of what technology can do — as a founder, an
+engineer, a CTO, and a Chief of Staff. The throughline isn't the title, it's
+the question: who does this actually serve? That's shaped everything from
+co-founding The Hidden Genius Project to representing Built.io in the OpenAPI
+Initiative to the work I do now at Recital. I'm at my best on small teams with
+hard problems, where the gap between strategy and execution is something you
+close yourself.
+
+
+EXPERIENCE
+--------------------------------------------------------------------------------
+
+Chief of Staff — Recital (2024 – Present)
+Legal technology
+
+* Serve as strategic advisor to the CEO, responsible for translating vision
+  into execution across product, engineering, sales, and operations
+* Built the company's sales process from scratch alongside the CEO
+* Developed the full category creation strategy — researched, wrote, and owns
+  the company's point of view on where legal tech is going
+* Managed the SOC 2 certification process end-to-end
+* Wrote grant proposals that have generated over $200k in funding
+
+Director of Engineering Ops — Yat Labs (2021 – 2023)
+Digital identity, blockchain, NFT
+
+* Led a 21-person engineering org (developers, QA, PMs) building Yat's digital
+  identity platform across blockchain, NFT, and communication products
+* Launched a real-time blockchain data analysis engine, driving core product
+  innovation
+* Improved on-time delivery by 30% through agile process changes — kept a
+  fast-moving team aligned through a period of significant market volatility
+
+Chief of Staff & Head of Digital — Refound (2020 – 2021)
+Leadership development
+
+* Served as Chief of Staff to the CEO, owning strategic planning, operations,
+  and two direct reports
+* Built the company's digital group coaching platform from scratch, reducing
+  client onboarding time by 40% — the technical foundation the company later
+  evolved into an AI coaching product
+* Bridged engineering and executive strategy in a small company where those
+  roles were the same conversation
+
+Chief Technology Officer — Partydash (2018 – 2020)
+E-commerce
+
+* Served as CTO of an e-commerce startup selling themed party boxes, taking
+  the company into its first digital product expansion
+* Designed and launched Dash Camp, a virtual summer camp for children built on
+  Apollo GraphQL and Vue.js — shipped during the early pandemic as the company
+  pivoted to digital
+* Led code reviews and mentorship across a small engineering team, setting
+  technical standards and culture
+
+Director of Technology Evangelism & Partnerships — Built.io (2014 – 2017)
+SaaS automation (acquired by Software AG, 2018)
+
+* Led developer partnerships and integrations, working directly with
+  engineering teams at Cisco, Meraki, Box, MongoDB, and others
+* Represented Built.io in the OpenAPI Initiative, contributing to API
+  standards that shaped the industry
+* Drove developer awareness through conference speaking — Cisco Live (Las
+  Vegas and Berlin), API World (2015 & 2016), DeveloperWeek 2017
+
+Co-Founder — The Hidden Genius Project (2012 – 2014)
+Youth technology & leadership
+
+* Co-founded a technology, entrepreneurship, and leadership program for Black
+  male youth — developed and taught the curriculum for the first two cohorts
+* Served as primary programming instructor, teaching Objective-C, Python, and
+  other skills to over 100 students in the founding years
+* The organization has since grown to reach more than 11,000 young people
+  across six cities, with 978,000+ hours of training delivered
+
+Technology Strategist & Lead Developer — Youth Radio (2012 – 2014)
+Nonprofit media
+
+* Taught coding and technology skills to youth at a nonprofit radio station,
+  building curriculum around the actual tools they needed to run their station
+* Modernized Youth Radio's technical infrastructure — built a real-time
+  listener metrics server and managed server architecture for the website
+  relaunch
+* Designed inclusive technology education curricula, prioritizing access and
+  practical skills over theory
+
+Co-Founder & CEO — Enole (2009 – 2012)
+Identity & authentication
+
+* Co-founded and led a company building a DNS-based digital identity platform
+  using NFC — a unified sign-on approach that predated the identity
+  infrastructure most of the industry eventually converged on
+* Raised $250k in seed funding and reached $40k in quarterly revenue within
+  the first year
+* Led product development and strategic partnerships from zero
+
+
+SKILLS
+--------------------------------------------------------------------------------
+Yes, I can code — Python, JavaScript/TypeScript, GraphQL, Node.js, Vue.js,
+React, and more than fits here. AWS, DigitalOcean, Vercel. GitHub, Docker.
+Not that any of that is the point anymore.
+
+
+EDUCATION
+--------------------------------------------------------------------------------
+Massachusetts Institute of Technology
+Electrical Engineering & Computer Science (did not complete)
+
+Milton Academy
+Class of 1997
+
+
+PUBLICATIONS
+--------------------------------------------------------------------------------
+The Fierce Urgency Of Now — Abernathy Magazine, November 2016
+An analysis of America's deepening political divisions and the urgent need for
+cooperative problem-solving toward equality and justice.
+
+Know your real-time protocols for IoT apps — InfoWorld, August 2015
+An overview of XMPP, CoAP, and MQTT protocols for real-time IoT communication.
+
+A software engineer's approach to streamlining DevOps processes — TechBeacon, August 2015
+Seven practical tips for optimizing DevOps processes and improving reliability
+in software deployment.
+
+More at collins.gd
+
+
+COMMUNITY
+--------------------------------------------------------------------------------
+Just Cities Institute — Board Member, Chair of Fundraising Committee (2024–present)
+Leading strategic fundraising initiatives to support equitable urban
+development and policy advocacy.
+
+Milton Academy 1798 Committee — Chair (2019–2025)
+Spearheaded fundraising for my high school alma mater — $25M+ raised, $5M
+annual expectation, supporting teacher pay, scholarships, and educational
+programs.
+
+
+LANGUAGES
+--------------------------------------------------------------------------------
+English: Native
+Spanish: Intermediate
+Portuguese: Beginner
