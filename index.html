@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurt Collins — Resume</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #faf8f5;
+      --text: #1c1c1c;
+      --muted: #888888;
+      --accent: #c45c2e;
+      --border: #e4dfd8;
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+    }
+    html { font-size: 16px; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    .page { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .toggle-bar { display: flex; justify-content: flex-end; margin-bottom: 3rem; }
+    .toggle-btn { background: none; border: 1px solid var(--border); color: var(--muted); font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.4rem 0.9rem; cursor: pointer; border-radius: 2px; transition: color 0.15s, border-color 0.15s; }
+    .toggle-btn:hover { color: var(--text); border-color: var(--text); }
+    .header { margin-bottom: 3rem; }
+    .header h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: normal; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 0.5rem; }
+    .header .tagline { font-size: 1rem; color: var(--accent); margin-bottom: 1.25rem; }
+    .header .contact { font-size: 0.85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+    .header .contact a { color: var(--muted); text-decoration: none; }
+    .header .contact a:hover { color: var(--accent); }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+    .summary { font-size: 1.05rem; line-height: 1.75; color: #3a3a3a; max-width: 660px; }
+    .section { margin-bottom: 3rem; }
+    .section-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.75rem; }
+    .job { margin-bottom: 2.25rem; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.25rem; margin-bottom: 0.2rem; }
+    .job-title { font-size: 1rem; font-weight: 600; color: var(--text); }
+    .job-dates { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+    .job-company { font-size: 0.875rem; color: var(--accent); margin-bottom: 0.75rem; }
+    .job-company .job-desc { color: var(--muted); font-style: italic; }
+    .job ul { list-style: none; padding: 0; }
+    .job ul li { font-size: 0.9rem; line-height: 1.65; padding-left: 1.1rem; position: relative; color: #3a3a3a; margin-bottom: 0.4rem; }
+    .job ul li::before { content: '—'; position: absolute; left: 0; color: var(--border); }
+    .skills-text { font-size: 0.9rem; line-height: 1.7; color: #3a3a3a; font-style: italic; }
+    .edu-entry { margin-bottom: 1.25rem; }
+    .edu-entry .school { font-size: 0.95rem; font-weight: 600; }
+    .edu-entry .degree { font-size: 0.85rem; color: var(--muted); }
+    .pub-entry { margin-bottom: 1.1rem; }
+    .pub-entry .pub-title { font-size: 0.9rem; font-weight: 600; }
+    .pub-entry .pub-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.2rem; }
+    .pub-entry .pub-desc { font-size: 0.85rem; color: #555; line-height: 1.6; }
+    .more-link { font-size: 0.85rem; color: var(--accent); text-decoration: none; display: inline-block; margin-top: 0.75rem; }
+    .more-link:hover { text-decoration: underline; }
+    .community-entry { margin-bottom: 1.5rem; }
+    .community-entry .org { font-size: 0.95rem; font-weight: 600; }
+    .community-entry .role { font-size: 0.85rem; color: var(--accent); margin-bottom: 0.3rem; }
+    .community-entry .desc { font-size: 0.85rem; color: #555; line-height: 1.6; }
+    .languages { font-size: 0.875rem; color: #3a3a3a; display: flex; gap: 2rem; flex-wrap: wrap; }
+    .lang-item span { color: var(--muted); font-size: 0.8rem; margin-left: 0.3rem; }
+    .footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .footer a { color: var(--muted); text-decoration: none; }
+    .footer a:hover { color: var(--accent); }
+    body.plaintext { background: #fff; font-family: var(--font-mono); }
+    body.plaintext .page { max-width: 680px; }
+    body.plaintext .header h1 { font-family: var(--font-mono); font-size: 1.4rem; letter-spacing: 0; font-weight: bold; }
+    body.plaintext * { color: var(--text) !important; border-color: #ccc !important; font-style: normal !important; }
+    body.plaintext .job ul li::before { content: '* '; }
+    body.plaintext .section-title::before { content: '## '; }
+    @media (max-width: 600px) { .page { padding: 2rem 1.25rem 4rem; } .job-header { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="toggle-bar">
+      <button class="toggle-btn" onclick="togglePlaintext()" id="toggle-btn">Plain text</button>
+    </div>
+    <header class="header">
+      <h1>Kurt Collins</h1>
+      <p class="tagline">25 years building technology in service of people.</p>
+      <div class="contact">
+        <a href="mailto:kurt@collins.gd">kurt@collins.gd</a>
+        <span>+1 (415) 385-3003</span>
+        <span>Lisbon &middot; Jersey City</span>
+        <a href="https://collins.gd" target="_blank">collins.gd</a>
+        <a href="https://linkedin.com/in/kurtcollins" target="_blank">linkedin.com/in/kurtcollins</a>
+      </div>
+    </header>
+    <hr class="divider">
+    <section class="section">
+      <p class="summary">I've spent 25 years at the edge of what technology can do — as a founder, an engineer, a CTO, and a Chief of Staff. The throughline isn't the title, it's the question: who does this actually serve? That's shaped everything from co-founding The Hidden Genius Project to representing Built.io in the OpenAPI Initiative to the work I do now at Recital. I'm at my best on small teams with hard problems, where the gap between strategy and execution is something you close yourself.</p>
+    </section>
+    <hr class="divider">
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+      <div class="job">
+        <div class="job-header"><span class="job-title">Chief of Staff</span><span class="job-dates">2024 – Present</span></div>
+        <div class="job-company">Recital <span class="job-desc">— Legal technology</span></div>
+        <ul>
+          <li>Serve as strategic advisor to the CEO, responsible for translating vision into execution across product, engineering, sales, and operations</li>
+          <li>Built the company's sales process from scratch alongside the CEO</li>
+          <li>Developed the full category creation strategy — researched, wrote, and owns the company's point of view on where legal tech is going</li>
+          <li>Managed the SOC 2 certification process end-to-end</li>
+          <li>Wrote grant proposals that have generated over $200k in funding</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-header"><span class="job-title">Director of Engineering Ops</span><span class="job-dates">2021 – 2023</span></div>
+        <div class="job-company">Yat Labs <span class="job-desc">— Digital identity, blockchain, NFT</span></div>
+        <ul>
+          <li>Led a 21-person engineering org (developers, QA, PMs) building Yat's digital identity platform across blockchain, NFT, and communication products</li>
+          <li>Launched a real-time blockchain data analysis engine, driving core product innovation</li>
+          <li>Improved on-time delivery by 30% through agile process changes — kept a fast-moving team aligned through a period of significant market volatility</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-header"><span class="job-title">Chief of Staff &amp; Head of Digital</span><span class="job-dates">2020 – 2021</span></div>
+        <div class="job-company">Refound <span class="job-desc">— Leadership development</span></div>
+        <ul>
+          <li>Served as Chief of Staff to the CEO, owning strategic planning, operations, and two direct reports</li>
+          <li>Built the company's digital group coaching platform from scratch, reducing client onboarding time by 40% — the technical foundation the company later evolved into an AI coaching product</li>
+          <li>Bridged engineering and executive strategy in a small company where those roles were the same conversation</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-header"><span class="job-title">Chief Technology Officer</span><span class="job-dates">2018 – 2020</span></div>
+        <div class="job-company">Partydash <span class="job-desc">— E-commerce</span></div>
+        <ul>
+          <li>Served as CTO of an e-commerce startup selling themed party boxes, taking the company into its first digital product expansion</li>
+          <li>Designed and launched Dash Camp, a virtual summer camp for children built on Apollo GraphQL and Vue.js — shipped during the early pandemic as the company pivoted to digital</li>
+          <li>Led code reviews and mentorship across a small engineering team, setting technical standards and culture</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-header"><span class="job-title">Director of Technology Evangelism &amp; Partnerships</span><span class="job-dates">2014 – 2017</span></div>
+        <div class="job-company">Built.io <span class="job-desc">— SaaS automation (acq. Software AG, 2018)</span></div>
+        <ul>
+          <li>Led developer partnerships and integrations, working directly with engineering teams at Cisco, Meraki, Box, MongoDB, and others to build and ship integrations</li>
+          <li>Represented Built.io in the OpenAPI Initiative, contributing to API standards that shaped the industry</li>
+          <li>Drove developer awareness through conference speaking — Cisco Live (Las Vegas and Berlin), API World (2015 &amp; 2016), DeveloperWeek 2017</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-header"><span class="job-title">Co-Founder</span><span class="job-dates">2012 – 2014</span></div>
+        <div class="job-company">The Hidden Genius Project <span class="job-desc">— Youth technology &amp; leadership</span></div>
+        <ul>
+          <li>Co-founded a technology, entrepreneurship, and leadership program for Black male youth — developed and taught the curriculum for the first two cohorts</li>
+          <li>Served as primary programming instructor, teaching Objective-C, Python, and other skills to over 100 students in the founding years</li>
+          <li>The organization has since grown to reach more than 11,000 young people across six cities, with 978,000+ hours of training delivered</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-header"><span class="job-title">Technology Strategist &amp; Lead Developer</span><span class="job-dates">2012 – 2014</span></div>
+        <div class="job-company">Youth Radio <span class="job-desc">— Nonprofit media</span></div>
+        <ul>
+          <li>Taught coding and technology skills to youth at a nonprofit radio station, building curriculum around the actual tools they needed to run their station</li>
+          <li>Modernized Youth Radio's technical infrastructure — built a real-time listener metrics server and managed server architecture for the website relaunch</li>
+          <li>Designed inclusive technology education curricula, prioritizing access and practical skills over theory</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-header"><span class="job-title">Co-Founder &amp; CEO</span><span class="job-dates">2009 – 2012</span></div>
+        <div class="job-company">Enole <span class="job-desc">— Identity &amp; authentication</span></div>
+        <ul>
+          <li>Co-founded and led a company building a DNS-based digital identity platform using NFC — a unified sign-on approach that predated the identity infrastructure most of the industry eventually converged on</li>
+          <li>Raised $250k in seed funding and reached $40k in quarterly revenue within the first year</li>
+          <li>Led product development and strategic partnerships from zero</li>
+        </ul>
+      </div>
+    </section>
+    <hr class="divider">
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <p class="skills-text">Yes, I can code — Python, JavaScript/TypeScript, GraphQL, Node.js, Vue.js, React, and more than fits here. AWS, DigitalOcean, Vercel. GitHub, Docker. Not that any of that is the point anymore.</p>
+    </section>
+    <hr class="divider">
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-entry">
+        <div class="school">Massachusetts Institute of Technology</div>
+        <div class="degree">Electrical Engineering &amp; Computer Science <em>(did not complete)</em></div>
+      </div>
+      <div class="edu-entry" style="margin-top:1rem;">
+        <div class="school">Milton Academy</div>
+        <div class="degree">Class of 1997</div>
+      </div>
+    </section>
+    <hr class="divider">
+    <section class="section">
+      <h2 class="section-title">Publications</h2>
+      <div class="pub-entry">
+        <div class="pub-title">The Fierce Urgency Of Now</div>
+        <div class="pub-meta">Abernathy Magazine — November 2016</div>
+        <div class="pub-desc">An analysis of America's deepening political divisions and the urgent need for cooperative problem-solving toward equality and justice.</div>
+      </div>
+      <div class="pub-entry">
+        <div class="pub-title">Know your real-time protocols for IoT apps</div>
+        <div class="pub-meta">InfoWorld — August 2015</div>
+        <div class="pub-desc">An overview of XMPP, CoAP, and MQTT protocols for real-time IoT communication.</div>
+      </div>
+      <div class="pub-entry">
+        <div class="pub-title">A software engineer's approach to streamlining DevOps processes</div>
+        <div class="pub-meta">TechBeacon — August 2015</div>
+        <div class="pub-desc">Seven practical tips for optimizing DevOps processes and improving reliability in software deployment.</div>
+      </div>
+      <a class="more-link" href="https://collins.gd" target="_blank">More at collins.gd &rarr;</a>
+    </section>
+    <hr class="divider">
+    <section class="section">
+      <h2 class="section-title">Community</h2>
+      <div class="community-entry">
+        <div class="org">Just Cities Institute</div>
+        <div class="role">Board Member, Chair of Fundraising Committee — 2024–present</div>
+        <div class="desc">Leading strategic fundraising initiatives to support equitable urban development and policy advocacy.</div>
+      </div>
+      <div class="community-entry">
+        <div class="org">Milton Academy 1798 Committee</div>
+        <div class="role">Chair — 2019–2025</div>
+        <div class="desc">Spearheaded fundraising for my high school alma mater — $25M+ raised, $5M annual expectation, supporting teacher pay, scholarships, and educational programs.</div>
+      </div>
+    </section>
+    <hr class="divider">
+    <section class="section">
+      <h2 class="section-title">Languages</h2>
+      <div class="languages">
+        <div class="lang-item">English <span>Native</span></div>
+        <div class="lang-item">Spanish <span>Intermediate</span></div>
+        <div class="lang-item">Portuguese <span>Beginner</span></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <span>Kurt Collins &mdash; <a href="mailto:kurt@collins.gd">kurt@collins.gd</a></span>
+      <a href="/resume.txt">Plain text &darr;</a>
+    </footer>
+  </div>
+  <script>
+    function togglePlaintext() {
+      const body = document.body;
+      const btn = document.getElementById('toggle-btn');
+      if (body.classList.contains('plaintext')) {
+        body.classList.remove('plaintext');
+        btn.textContent = 'Plain text';
+      } else {
+        body.classList.add('plaintext');
+        btn.textContent = 'Designed view';
+      }
+    }
+  </script>
+</body>
+</html>
