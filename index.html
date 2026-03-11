@@ -65,6 +65,7 @@
     .pub-entry .pub-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.2rem; }
     .pub-entry .pub-desc { font-size: 0.85rem; color: #555; line-height: 1.6; }
     .more-link { font-size: 0.85rem; color: var(--accent); text-decoration: underline; display: inline-block; margin-top: 0.75rem; }
+    .more-link:hover { text-decoration: none; }
     .community-entry { margin-bottom: 1.5rem; }
     .community-entry .org { font-size: 0.95rem; font-weight: 600; }
     .community-entry .role { font-size: 0.85rem; color: var(--accent); margin-bottom: 0.3rem; }
@@ -72,8 +73,11 @@
     .languages { font-size: 0.875rem; color: #3a3a3a; display: flex; gap: 2rem; flex-wrap: wrap; }
     .lang-item span { color: var(--muted); font-size: 0.8rem; margin-left: 0.3rem; }
     .footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
-    .footer a { color: var(--muted); text-decoration: none; }
-    .footer a:hover { color: var(--accent); }
+    .footer a { color: var(--muted); text-decoration: underline; }
+    .footer a:hover { color: var(--accent); text-decoration: none; }
+    .lang-item { position: relative; cursor: default; }
+    .lang-item::after { content: attr(data-hover); position: absolute; left: 0; top: -1.4rem; font-size: 0.75rem; color: var(--accent); opacity: 0; transition: opacity 0.15s; pointer-events: none; }
+    .lang-item:hover::after { opacity: 1; }
     body.plaintext { background: #fff; font-family: var(--font-mono); }
     body.plaintext .page { max-width: 680px; }
     body.plaintext .header h1 { font-family: var(--font-mono); font-size: 1.4rem; letter-spacing: 0; font-weight: bold; }
@@ -235,9 +239,9 @@
     <section class="section">
       <h2 class="section-title">Languages</h2>
       <div class="languages">
-        <div class="lang-item">English <span>Native</span></div>
-        <div class="lang-item">Spanish <span>Intermediate</span></div>
-        <div class="lang-item">Portuguese <span>Beginner</span></div>
+        <div class="lang-item" data-hover="hi">English <span>Native</span></div>
+        <div class="lang-item" data-hover="hola">Spanish <span>Intermediate</span></div>
+        <div class="lang-item" data-hover="what do I look like, Duolingo?">Portuguese <span>Beginner</span></div>
       </div>
     </section>
     <footer class="footer">
