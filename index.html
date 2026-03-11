@@ -41,7 +41,7 @@
     .header h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: normal; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 0.5rem; }
     .header .tagline { font-size: 1rem; color: var(--accent); margin-bottom: 1.25rem; }
     .header .contact { font-size: 0.85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
-    .header .contact a { color: var(--muted); text-decoration: none; }
+    .header .contact a { color: var(--muted); text-decoration: underline; }
     .header .contact a:hover { color: var(--accent); }
     .divider { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
     .summary { font-size: 1.05rem; line-height: 1.75; color: #3a3a3a; max-width: 660px; }
@@ -64,8 +64,7 @@
     .pub-entry .pub-title { font-size: 0.9rem; font-weight: 600; }
     .pub-entry .pub-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.2rem; }
     .pub-entry .pub-desc { font-size: 0.85rem; color: #555; line-height: 1.6; }
-    .more-link { font-size: 0.85rem; color: var(--accent); text-decoration: none; display: inline-block; margin-top: 0.75rem; }
-    .more-link:hover { text-decoration: underline; }
+    .more-link { font-size: 0.85rem; color: var(--accent); text-decoration: underline; display: inline-block; margin-top: 0.75rem; }
     .community-entry { margin-bottom: 1.5rem; }
     .community-entry .org { font-size: 0.95rem; font-weight: 600; }
     .community-entry .role { font-size: 0.85rem; color: var(--accent); margin-bottom: 0.3rem; }
@@ -94,16 +93,14 @@
       <p class="tagline">25 years building technology in service of people.</p>
       <div class="contact">
         <a href="mailto:kurt@collins.gd">kurt@collins.gd</a>
-        <span>+1 415 385 3003</span>
-        <span>+351 967 933 383</span>
-        <span>Jersey City &middot; Lisbon</span>
+        <span>Jersey City <a href="tel:+14153853003">+1 415 385 3003</a> &middot; Lisbon <a href="tel:+351967933383">+351 967 933 383</a></span>
         <a href="https://collins.gd" target="_blank">collins.gd</a>
         <a href="https://linkedin.com/in/kurtcollins" target="_blank">linkedin.com/in/kurtcollins</a>
       </div>
     </header>
     <hr class="divider">
     <section class="section">
-      <p class="summary">I've spent 25 years at the edge of what technology can do — as a founder, an engineer, a CTO, and a Chief of Staff. The throughline isn't the title, it's the question: who does this actually serve? That's shaped everything from co-founding The Hidden Genius Project to representing Built.io in the OpenAPI Initiative to the work I do now at Recital. I'm at my best on small teams with hard problems, where the gap between strategy and execution is something you close yourself.</p>
+      <p class="summary"><strong>I've spent 25 years at the edge of what technology can do</strong> — as a founder, an engineer, a CTO, and a Chief of Staff. The throughline isn't the title, it's the question: who does this actually serve? That's shaped everything from co-founding The Hidden Genius Project to representing Built.io in the OpenAPI Initiative to the work I do now at Recital. I'm at my best on small teams with hard problems, where the gap between strategy and execution is something you close yourself.</p>
     </section>
     <hr class="divider">
     <section class="section">
@@ -193,7 +190,7 @@
       <h2 class="section-title">Education</h2>
       <div class="edu-entry">
         <div class="school">Massachusetts Institute of Technology</div>
-        <div class="degree">Electrical Engineering &amp; Computer Science <em>(did not complete)</em></div>
+        <div class="degree">Electrical Engineering &amp; Computer Science <em>(did not complete; left junior year to start and run companies—sorry, mom)</em></div>
       </div>
       <div class="edu-entry" style="margin-top:1rem;">
         <div class="school">Milton Academy</div>
@@ -204,17 +201,17 @@
     <section class="section">
       <h2 class="section-title">Publications</h2>
       <div class="pub-entry">
-        <div class="pub-title">The Fierce Urgency Of Now</div>
+        <div class="pub-title"><em>The Fierce Urgency Of Now</em></div>
         <div class="pub-meta">Abernathy Magazine — November 2016</div>
         <div class="pub-desc">An analysis of America's deepening political divisions and the urgent need for cooperative problem-solving toward equality and justice.</div>
       </div>
       <div class="pub-entry">
-        <div class="pub-title">Know your real-time protocols for IoT apps</div>
+        <div class="pub-title"><em>Know your real-time protocols for IoT apps</em></div>
         <div class="pub-meta">InfoWorld — August 2015</div>
         <div class="pub-desc">An overview of XMPP, CoAP, and MQTT protocols for real-time IoT communication.</div>
       </div>
       <div class="pub-entry">
-        <div class="pub-title">A software engineer's approach to streamlining DevOps processes</div>
+        <div class="pub-title"><em>A software engineer's approach to streamlining DevOps processes</em></div>
         <div class="pub-meta">TechBeacon — August 2015</div>
         <div class="pub-desc">Seven practical tips for optimizing DevOps processes and improving reliability in software deployment.</div>
       </div>
